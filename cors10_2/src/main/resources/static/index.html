@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.1.0.js"></script>
+</head>
+<body>
+<div id="app"></div>
+<input type="button" value="GET DATA" onclick="getData()">
+<input type="button" value="POST DATA" onclick="postData()">
+<input type="button" value="PUT DATA" onclick="putData()">
+<input type="button" value="DELETE DATA" onclick="deleteData()">
+<script>
+  function getData() {
+      $.get('http://localhost:8080/hello',function (msg) {
+          console.log(msg);
+          $("#app").html(msg);
+      })
+  }
+
+  function postData() {
+      $.post('http://localhost:8080/hello', function (msg) {
+          console.log(msg);
+          $("#app").html(msg)
+
+      })
+  }
+
+
+  function putData() {
+      $.ajax({
+          type:'put',
+          url:'http://localhost:8080/hello',
+          success:function (msg) {
+              console.log(msg);
+              $("#app").html(msg);
+          },
+          error:function (msg) {
+              console.log(msg);
+              $("#app").html(msg);
+          }
+      });
+  }
+
+  function deleteData() {
+      $.ajax({
+          type:'delete',
+          url:'http://localhost:8080/hello',
+          success:function (msg) {
+              console.log(msg);
+              $("#app").html(msg);
+          },
+          error:function (msg) {
+              console.log(msg);
+              $("#app").html(msg);
+          }
+      });
+  }
+</script>
+</body>
+</html>
