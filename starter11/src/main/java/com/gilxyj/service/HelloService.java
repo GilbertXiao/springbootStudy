@@ -1,33 +1,30 @@
 package com.gilxyj.service;
 
+import com.gilxyj.config.HelloProperties;
+import org.springframework.beans.factory.annotation.Autowired;
+
 /**
  * @program: starter11
  * @description:
  * @author: GilbertXiao
  * @create: 2019-08-02 22:06
  **/
+
 public class HelloService {
 
-    private String msg;
-    private String name;
+    @Autowired
+    HelloProperties helloProperties;
 
     public String sayHello(){
-        return name+" say:"+msg ;
+        return helloProperties.getName()+" say:"+helloProperties.getMsg() ;
     }
 
-    public String getMsg() {
-        return msg;
+
+    public HelloProperties getHelloProperties() {
+        return helloProperties;
     }
 
-    public void setMsg(String msg) {
-        this.msg = msg;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public void setHelloProperties(HelloProperties helloProperties) {
+        this.helloProperties = helloProperties;
     }
 }

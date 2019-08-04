@@ -1,6 +1,7 @@
 package com.gilxyj.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
 
 import javax.xml.bind.annotation.XmlType;
 
@@ -10,6 +11,7 @@ import javax.xml.bind.annotation.XmlType;
  * @author: GilbertXiao
  * @create: 2019-08-02 22:00
  **/
+@Component
 @ConfigurationProperties(prefix = "gilxyj")
 public class HelloProperties {
 
