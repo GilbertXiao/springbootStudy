@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gilxyj.mybatisjpa28.mapper.BookMapper" >
+    <insert id="addBook" parameterType="com.gilxyj.mybatisjpa28.bean.Book">
+        insert into t_book(author,name) values (#{author},#{name})
+    </insert>
+    <select id="getAllBooks" resultType="com.gilxyj.mybatisjpa28.bean.Book">
+        select * from t_book;
+    </select>
+
+
+
+</mapper>
