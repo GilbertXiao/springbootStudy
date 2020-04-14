@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>RegBook</title>
+</head>
+<body>
+
+<form action="/doReg" method="post">
+    <table>
+        <tr>
+            <td>书名</td>
+            <td><input type="text" name="name" th:value="${book?.name}"></td>
+        </tr>
+        <tr>
+            <td>价格</td>
+            <td><input type="text" name="price" th:value="${book?.price}"></td>
+        </tr>
+        <tr>
+            <input type="submit"  name="注册" id="submit">
+        </tr>
+    </table>
+</form>
+
+
+
+<form action="/doCommit" method="post">
+    <table>
+        <tr>
+            <td>书名</td>
+            <td><input type="text" name="b.name" th:value="${bok?.name}"></td>
+        </tr>
+        <tr>
+            <td>价格</td>
+            <td><input type="text" name="b.price" th:value="${bok?.price}"></td>
+        </tr>
+        <tr>
+            <td>作者名</td>
+            <td><input type="text" name="a.name" th:value="${author?.name}"></td>
+        </tr>
+        <tr>
+            <td>年龄</td>
+            <td><input type="text" name="a.age" th:value="${author?.age}"></td>
+        </tr>
+
+        <tr>
+            <input type="submit"  name="绑定" id="allReg">
+        </tr>
+    </table>
+</form>
+</body>
+</html>

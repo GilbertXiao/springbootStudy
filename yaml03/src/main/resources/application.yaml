@@ -1,0 +1,20 @@
+server:
+  port: 8888
+  servlet:
+    context-path: /aaa
+
+
+book:
+  name: "三国演义"
+  author: "罗贯中"
+  fans:
+    - "小红"
+    - "小明"
+    - "小智"
+  buyers:
+    - name: "萧十一郎"
+      address: "深圳"
+      price: 26
+    - name: "令狐冲"
+      address: "广州"
+      price: 30
